@@ -23,6 +23,9 @@ importers:
       vuex:
         specifier: 4.0.2
         version: 4.0.2(vue@3.4.27)
+      vuex-persistedstate:
+        specifier: 4.1.0
+        version: 4.1.0(vuex@4.0.2(vue@3.4.27))
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
@@ -632,6 +635,10 @@ packages:
   decode-uri-component@0.2.2:
     resolution: {integrity: sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==}
     engines: {node: '>=0.10'}
+
+  deepmerge@4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
+    engines: {node: '>=0.10.0'}
 
   define-data-property@1.1.4:
     resolution: {integrity: sha512-rBMvIzlpA8v6E+SJZoo++HAYqsLrkg7MSfIinMPFhmkorw7X+dOXVJQs+QT69zGkzMyfDnIMN2Wid1+NbL3T+A==}
@@ -1408,6 +1415,10 @@ packages:
     resolution: {integrity: sha512-JxHc1weCN68wRY0fhCoXpyK55m/XPHafOmK4UWD7m2CI14GMcFypt4w/0+NV5f/ZMby2F6S2wwA7fgynh9gWSw==}
     engines: {node: '>=0.10.0'}
 
+  shvl@2.0.3:
+    resolution: {integrity: sha512-V7C6S9Hlol6SzOJPnQ7qzOVEWUQImt3BNmmzh40wObhla3XOYMe4gGiYzLrJd5TFa+cI2f9LKIRJTTKZSTbWgw==}
+    deprecated: older versions vulnerable to prototype pollution
+
   side-channel@1.0.6:
     resolution: {integrity: sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==}
     engines: {node: '>= 0.4'}
@@ -1653,6 +1664,12 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  vuex-persistedstate@4.1.0:
+    resolution: {integrity: sha512-3SkEj4NqwM69ikJdFVw6gObeB0NHyspRYMYkR/EbhR0hbvAKyR5gksVhtAfY1UYuWUOCCA0QNGwv9pOwdj+XUQ==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      vuex: ^3.0 || ^4.0.0-rc
 
   vuex@4.0.2:
     resolution: {integrity: sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==}
@@ -2196,6 +2213,8 @@ snapshots:
       ms: 2.1.2
 
   decode-uri-component@0.2.2: {}
+
+  deepmerge@4.3.1: {}
 
   define-data-property@1.1.4:
     dependencies:
@@ -3076,6 +3095,8 @@ snapshots:
       is-plain-object: 2.0.4
       split-string: 3.1.0
 
+  shvl@2.0.3: {}
+
   side-channel@1.0.6:
     dependencies:
       call-bind: 1.0.7
@@ -3379,6 +3400,12 @@ snapshots:
       '@vue/runtime-dom': 3.4.27
       '@vue/server-renderer': 3.4.27(vue@3.4.27)
       '@vue/shared': 3.4.27
+
+  vuex-persistedstate@4.1.0(vuex@4.0.2(vue@3.4.27)):
+    dependencies:
+      deepmerge: 4.3.1
+      shvl: 2.0.3
+      vuex: 4.0.2(vue@3.4.27)
 
   vuex@4.0.2(vue@3.4.27):
     dependencies:

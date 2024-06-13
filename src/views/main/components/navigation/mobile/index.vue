@@ -19,7 +19,7 @@
       </li>
       <!-- category item -->
       <li
-        v-for="(item, index) in data"
+        v-for="(item, index) in $store.getters.categorys"
         :ref="setItemRef"
         @click="onItemClick(index)"
         :key="item.id"
@@ -32,7 +32,7 @@
       </li>
     </ul>
     <m-popup v-model="isVisible">
-      <menu-vue :categorys="data" @onItemClick="onItemClick"></menu-vue>
+      <menu-vue @onItemClick="onItemClick"></menu-vue>
     </m-popup>
   </div>
 </template>
@@ -41,13 +41,6 @@
 import { ref, watch, onBeforeUpdate } from 'vue'
 import { useScroll } from '@vueuse/core'
 import MenuVue from '@/views/main/components/menu/index.vue'
-
-defineProps({
-  data: {
-    type: Array,
-    required: true
-  }
-})
 
 // 滑块
 const sliderStyle = ref({
