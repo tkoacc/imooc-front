@@ -41,6 +41,9 @@
 import { ref, watch, onBeforeUpdate } from 'vue'
 import { useScroll } from '@vueuse/core'
 import MenuVue from '@/views/main/components/menu/index.vue'
+import { useStore } from 'vuex'
+
+const store = useStore()
 
 // 滑块
 const sliderStyle = ref({
