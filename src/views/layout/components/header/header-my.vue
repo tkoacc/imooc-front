@@ -107,7 +107,9 @@ const onItemClick = (item) => {
       // 退出登录不存在跳转路径
       store.dispatch('user/logout')
     })
+    return
   }
+  router.push(item.path)
 }
 </script>
 
