@@ -72,6 +72,9 @@ import { ref } from 'vue'
 import { getPexelsFromId } from '@/api/pexels'
 import { useRouter } from 'vue-router'
 import { isMobileTerminal } from '@/utils/flexible'
+import { useStore } from 'vuex'
+
+const store = useStore()
 
 const props = defineProps({
   id: {
@@ -93,6 +96,7 @@ getPexelData()
  */
 const router = useRouter()
 const onPop = () => {
+  store.commit('app/changeRouterType', 'back')
   router.back()
 }
 </script>

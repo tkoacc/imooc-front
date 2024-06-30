@@ -84,23 +84,10 @@ const menuArr = [
 ]
 // 进入登录
 const onToLogin = () => {
+  store.commit('app/changeRouterType', 'push')
   router.push('/login')
 }
-/**
- * menu Item 点击事件，也可以根据其他的 key 作为判定，比如 name
- */
-// const onItemClick = (path) => {
-//   // 有路径则进行路径跳转
-//   if (path) {
-//     router.push(path)
-//     return
-//   }
-//   // 无路径则为退出登录
-//   confirm('您确定要退出登录吗？').then(() => {
-//     // 退出登录不存在跳转路径
-//     store.dispatch('user/logout')
-//   })
-// }
+
 const onItemClick = (item) => {
   if (item.id === 2) {
     confirm('您确定要退出登录吗？').then(() => {
@@ -109,6 +96,7 @@ const onItemClick = (item) => {
     })
     return
   }
+  store.commit('app/changeRouterType', 'push')
   router.push(item.path)
 }
 </script>
