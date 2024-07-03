@@ -23,6 +23,9 @@ importers:
       cropperjs:
         specifier: 1.5.12
         version: 1.5.12
+      dayjs:
+        specifier: ^1.11.11
+        version: 1.11.11
       driver.js:
         specifier: 0.9.8
         version: 0.9.8
@@ -700,6 +703,9 @@ packages:
 
   dateformat@2.2.0:
     resolution: {integrity: sha512-GODcnWq3YGoTnygPfi02ygEiRxqUxpJwuRHjdhJYuxpcZmDq4rjBiXYmbCCzStxo176ixfLT6i4NPwQooRySnw==}
+
+  dayjs@1.11.11:
+    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -2586,6 +2592,8 @@ snapshots:
       is-data-view: 1.0.1
 
   dateformat@2.2.0: {}
+
+  dayjs@1.11.11: {}
 
   debug@2.6.9:
     dependencies:
