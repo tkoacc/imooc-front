@@ -67,6 +67,12 @@ const onGuideClick = () => {
   driver.defineSteps(steps)
   driver.start()
 }
+/**
+ * 反馈处理
+ */
+const onToFeedback = () => {
+  window.open(FEEDBACK_URL, '_blank')
+}
 </script>
 
 <style lang="scss" scoped>

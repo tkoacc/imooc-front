@@ -42,3 +42,14 @@ export const LOGIN_TYPE_USERNAME = 'username'
 // STS 上传数据
 export const REGION = 'oss-cn-beijing'
 export const BUCKET = 'imooc-front'
+
+export const LOGIN_TYPE_OAUTH_NO_REGISTER_CODE = 204
+export const LOGIN_TYPE_QQ = 'QQ'
+
+// 兔小巢反馈地址
+export const FEEDBACK_URL = 'https://support.qq.com/product/383681'
+
+// 微博APP Key
+export const WEI_BO_APP_KEY = '3454329089'
+// 微博用户的 UID
+export const WEI_BO_UID = '5984245953'

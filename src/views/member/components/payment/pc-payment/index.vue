@@ -28,4 +28,16 @@
 
 <script setup>
 import discountsVue from '../discounts.vue'
+import { alipay } from '@/utils/pay'
+
+const props = defineProps({
+  payData: {
+    required: true,
+    type: Object
+  }
+})
+
+const onAliPayClick = () => {
+  alipay(props.payData.title, props.payData.desc)
+}
 </script>

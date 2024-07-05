@@ -45,6 +45,10 @@ export default {
         ...payload,
         password: password ? md5(password) : ''
       })
+      // QQ 扫码登录，用户未注册
+      if (data.code === LOGIN_TYPE_OAUTH_NO_REGISTER_CODE) {
+        return data.code
+      }
       // 保存 token
       context.commit('setToken', data.token)
       // 获取用户信息

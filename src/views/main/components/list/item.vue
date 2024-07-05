@@ -126,4 +126,13 @@ const onToPinsClick = () => {
     location: imgContainerCenter.value
   })
 }
+/**
+ * 分享按钮点击处理
+ */
+const onShareClick = () => {
+  weiboShare(
+    props.data.photo,
+    `https://imooc-front.lgdsunday.club/pins/${props.data.id}`
+  )
+}
 </script>
